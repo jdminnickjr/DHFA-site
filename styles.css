@@ -52,7 +52,6 @@ h1 {
     font-size: 2rem;
     border-bottom: solid white 3px;
     padding: 1rem 0;
-    max-width: 15rem;
     margin: 0 auto 1rem auto;
     line-height: 2rem;
 }
@@ -250,6 +249,9 @@ ul {
 
 /* REGISTRATION SECTION---------------------- */
 .registration {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     background-color: rgba(0, 0, 0, 0.6);
     align-items: center;
     width: 100vw;
@@ -258,20 +260,16 @@ ul {
 }
 
 .class-div, .reg-div {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    justify-content: space-evenly;
-}
-
-.class-text, .reg-text {
-    text-align: left;
-    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 5rem;
+    text-align: center;
+    justify-self: center;
+    margin: 2rem 2rem;
 }
 
 .check-button, .reg-button {
-    margin-top: 4rem;
-    margin-right: 1rem;
+    justify-self: center;
 }
 
 /* VIDEO LIBRARY SECTION-------------------------- */
@@ -283,18 +281,17 @@ ul {
     width: 100%;
     overflow: hidden;
     filter: grayscale(100%);
-    margin-top: 0;
 }
 
 .video-div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     text-align: center;
-    justify-content: space-evenly;
 }
 
 .video-button {
-    align-self: center;
+    justify-self: center;
 }
 
 /* SOCIAL MEDIA SECTION-------------------------- */
@@ -306,21 +303,22 @@ ul {
 .social-list {
     font-family: "BabaPro";
     position: relative;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 1fr;
+    grid-auto-flow: column;
     text-decoration: none;
     list-style-type: none;
     text-align: center;
-    justify-content: start;
     background-color: rgba(0, 0, 0, 0.6);
     max-width: 100vw;
     max-height: 3.5rem;
-    font-size: .5rem;
     padding: 0;
 }
 
 .social-list li {
-    padding: .6rem;
+    padding: .5rem;
 }
 
 .social-list span {
@@ -417,13 +415,21 @@ button {
 
 /* OPENING TAG SECTION 1046px----------------------- */
 
-.opening-tag h1 {
-    min-width: 35rem;
+.opening-tag {
+    display: grid;
+    grid-template-columns: auto 40rem auto;
+    grid-template-rows: auto auto auto;
 }
 
-.opening-tag p {
-    max-width: 30rem;
-    margin-left: 18rem;
+.opening-div {
+    display:grid;
+    grid-template-columns: 40rem;
+    grid-template-rows: repeat(3, auto);
+    grid-column-start: 2;
+}
+
+.info-button {
+    justify-self: center;
 }
 
 .head-img {
@@ -432,107 +438,85 @@ button {
 
 /* REGISTRATION SECTION 1046px---------------------- */
 .registration {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    min-width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+    max-height: 22rem;
+    padding-bottom: 2rem;
 }
 
 .class-div, .reg-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.class-div {
-    margin-left: 7rem;
+    display: grid;
+    grid-template-columns: auto;
+   grid-template-rows: auto 10rem auto;
 }
 
 .class-text {
     text-align: left;
-    margin: 1rem 0;
+    
 }
 
 .reg-tag {
-    min-width: 22rem;
-    margin-right: 8rem;
+    min-width: 25rem;
 }
 
 .reg-text {
     white-space: pre-line;
     text-align: right;
-    margin: 1rem 0 2rem 0;
 }
 
 .reg-button, .check-button {
-    margin: 2rem 0 4rem 0rem;
     max-width: 10rem;
+    margin-bottom: 2rem;
 }
-
-.reg-button {
-    margin-left: 8rem;
-    margin-top: 0;
-}
-
-.class-text,
-.reg-text {
-    max-width: 20rem;
-}
-
-
 
 
 /* VIDEO LIBRARY SECTION 1046px-------------------------- */
 
 .papa-phil {
-    display: flex;
-    flex-direction: row;
     max-width: 40vw;
     margin: 5rem;
 }
 
 .video-library {
     position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
 }
 
 .video-div {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 20rem;
+    grid-template-rows: 4rem;
     text-align: left;
-    margin-left: 4rem;
-    max-width: 20rem;
-}
-
-.video-library p {
-    margin: 0 0 2rem 0;
+    justify-content: space-around;
+    margin: 8rem auto;
 }
 
 .hilt-1 {
+    display: block;
     position: absolute;
-    display: flex;
-    overflow:hidden;
+    overflow: hidden;
     z-index: -1;
-    position: absolute;
-    top: -14rem;
-    max-width: 30rem;
+    bottom: 0;
+    right: 0;
+    max-width: auto;
 }
 
 /* CLUB DOCUMENTS SECTION 1046px-------------------------- */
 
 .club-documents {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 22rem;
-    margin: 0 0 5rem 8rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 20rem auto;
+    grid-template-rows: auto;
+    text-align: left;
+    justify-content: space-around;
+   
 }
 
 .hilt-2 {
@@ -540,15 +524,14 @@ button {
     z-index: -1;
     position: absolute;
     max-width: 30rem;
-    top: -3rem;
-    left: -8rem;
+    top: 0;
+    left: 0;
 }
 
 .google-drive {
-    position: absolute;
-    min-width: 10rem;
-    right: -30rem;
-    height: 40rem;
+    max-width: 40vw;
+    margin-right: 7rem;
+    
 }
 
 /* SOCIAL MEDIA FOOTER 1046px----------------------------- */
