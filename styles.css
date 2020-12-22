@@ -54,6 +54,7 @@ h1 {
     padding: 1rem 0;
     margin: 0 auto 1rem auto;
     line-height: 2rem;
+    max-width: 15rem;
 }
 
 section {
@@ -133,10 +134,12 @@ ul {
 
 .shield {
     position: absolute;
-    top: 3.5rem;
+    top: 5rem;
     bottom: 0;
-    left: -2rem;
+    left: 3rem;
+    max-width: 30%;
 }
+
 
 /* NAVIGATION SECTION------------------------ */
 .menuToggle {
@@ -350,29 +353,11 @@ svg:hover {
 
 /* MEDIA QUERIES-------------------------------- */
 
-@media(min-width: 500px){
-
-/* OPENING TAG SECTION 500px-------------------- */
-
-
-
-/* REGISTRATION SECTION 500px-------------------- */
-
-
-
-/* OPENING TAG SECTION 500px-------------------- */
-
-
-/* VIDEO LIBRARY SECTION 500px-------------------- */
-
-
-/* CLUB DOCUMENTS SECTION 500px-------------------- */
-
-
-/* SOCIAL MEDIA SECTION 500px-------------------- */
-}
-
 @media (min-width: 1046px){
+
+h1 {
+    min-width: 25rem;
+}
 
 button {
     min-width: 12rem;
@@ -381,11 +366,6 @@ button {
 
 .header-top {
     min-height: 12rem;
-}
-
-.menuToggle {
-    top: 2rem;
-    left: 1.5rem;
 }
 
 
@@ -401,17 +381,47 @@ button {
 }
 
 .shield {
-    top: 10rem;
-    bottom: 0;
-    left: -2rem;
-    min-width: 50rem;
+    top: 15rem;
+    left: 8rem;
+    max-width: 20rem;
 }
 
 .head-img {
-    margin-top: 4rem;
+    margin-top: 11rem;
+}
+/* NAVIGATION SECTION 1046px------------------------ */
+.menuToggle span {
+    display: none;
 }
 
+.menu {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr;
+    text-align: center;
+    transform: none;
+    width: 100vw;
+    height: 6rem;
+    border: none;
+    border-radius: 0px;
+    background-position: center;
+    background-color: black;
+    background-image: none;
+    padding: 0 2rem;
+    margin: 0;
+    top: 5rem;
+    left: -1rem;
+}
 
+.menuToggle {
+    left: 1rem;
+}
+
+.menu li {
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;;
+    align-self: center;
+}
 
 /* OPENING TAG SECTION 1046px----------------------- */
 
@@ -419,6 +429,10 @@ button {
     display: grid;
     grid-template-columns: auto 40rem auto;
     grid-template-rows: auto auto auto;
+}
+
+.opening-tag h1 {
+    min-width: 35rem;
 }
 
 .opening-div {
@@ -434,6 +448,7 @@ button {
 
 .head-img {
     max-height: 100%;
+    margin-top: 12rem;
 }
 
 /* REGISTRATION SECTION 1046px---------------------- */
@@ -494,6 +509,7 @@ button {
     text-align: left;
     justify-content: space-around;
     margin: 8rem auto;
+    overflow: hidden;
 }
 
 .hilt-1 {
