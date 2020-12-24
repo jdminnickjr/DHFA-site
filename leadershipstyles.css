@@ -254,6 +254,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
+    justify-content: space-around;
+    padding: 0 0 0 1.5rem;
 }
 
 .instructor-list li {
@@ -261,8 +263,8 @@
     grid-template-columns: 1;
     grid-template-rows: 1;
     list-style-type: none;
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
 }
 
 .instructor-list:nth-of-type(1n){
@@ -303,7 +305,7 @@
     grid-row: 1 / -1;
     max-width: 75%;
     max-height: 60%;
-    font-size: .9rem;
+    font-size: .6rem;
     justify-self: center;
     align-self: end;
     justify-content: center;
