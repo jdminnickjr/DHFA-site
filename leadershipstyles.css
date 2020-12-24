@@ -253,9 +253,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: .5rem;
     justify-content: center;
     align-content: center;
+    padding: 0;
 }
 
 .instructor-list li {
@@ -263,8 +264,8 @@
     grid-template-columns: 1;
     grid-template-rows: 1;
     list-style-type: none;
-    width: 9rem;
-    height: 9rem;
+    width: 10rem;
+    height: 10rem;
     justify-self: center;
 }
 
