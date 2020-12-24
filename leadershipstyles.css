@@ -71,10 +71,6 @@
       margin: 3rem;
   }
   
-  ul {
-      margin: 0;
-  }
-  
   .overlay {
       background-image: url(images/DHFA-logo-overlay.png);
       background-size: cover;
@@ -160,8 +156,8 @@
 
 .menuToggle a:hover {
     transition: 0.4s ease-in-out;
-  color: #32ebef;
-  text-decoration: underline;
+    color: #32ebef;
+    text-decoration: underline;
 }
 
 .menuToggle input {
@@ -366,4 +362,104 @@ svg:hover {
     fill: #32ebef;
     color: #32ebef;
     text-decoration: underline;
+}
+
+/* MEDIA QUERIES--------------------------------------- */
+
+@media(min-width: 500px){
+
+h1 {
+    max-width: 40rem;
+}
+
+.instructor-list {
+    grid-gap: 2rem;
+}
+
+.instructor-list li {
+    width: 15rem;
+    height: 15rem;  
+}
+
+.book-button {
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1.2rem;
+}
+    
+
+}
+
+@media(min-width: 1046px) {
+
+/* HEADER SECTION 1046px----------------------------- */
+
+.header-top {
+    min-height: 12rem;
+}
+
+
+.logo {
+    min-width: 11rem;
+    left: 6rem;
+}
+
+.members-tag {
+    font-size: 2rem;
+    top: 1.75rem;
+    left: 19rem;
+}
+
+.shield {
+    top: 10rem;
+    right: 2rem;
+    max-width: 20rem;
+}
+
+.head-img {
+    margin-top: 11rem;
+}
+/* NAVIGATION SECTION 1046px------------------------ */
+
+    .menuToggle span {
+        display: none;
+    }
+    
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 1fr;
+        text-align: center;
+        transform: none;
+        width: 100vw;
+        height: 6rem;
+        border: none;
+        border-radius: 0px;
+        background-position: center;
+        background-color: black;
+        background-image: none;
+        padding: 0 2rem;
+        margin: 0;
+        top: 5rem;
+        left: -1rem;
+    }
+    
+    .menuToggle {
+        left: 1rem;
+    }
+    
+    .menu li {
+        padding: 1rem 1.2rem;
+        font-size: 1.3rem;;
+        align-self: center;
+    }
+    
+
+
+.instructor-list {
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem;
+}
+
+
 }
