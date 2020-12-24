@@ -500,6 +500,10 @@ button {
     grid-template-rows: auto;
 }
 
+.video-library span {
+    max-width: 15rem;
+}
+
 .video-div {
     position: relative;
     display: grid;
